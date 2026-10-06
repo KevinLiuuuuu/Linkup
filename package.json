@@ -11,6 +11,7 @@
     "doctor": "expo-doctor"
   },
   "dependencies": {
+    "@expo/metro-runtime": "~5.0.5",
     "@expo/vector-icons": "^14.0.4",
     "@legendapp/list": "^1.0.16",
     "expo": "~53.0.0",
@@ -25,15 +26,18 @@
     "expo-secure-store": "~14.2.3",
     "expo-status-bar": "~2.2.3",
     "expo-web-browser": "~14.1.6",
+    "leaflet": "^1.9.4",
     "react": "19.0.0",
     "react-dom": "19.0.0",
+    "react-leaflet": "^5.0.0",
     "react-native": "0.79.2",
     "react-native-appwrite": "^0.7.0",
     "react-native-gesture-handler": "~2.24.0",
     "react-native-maps": "1.20.1",
     "react-native-safe-area-context": "5.4.0",
     "react-native-screens": "~4.10.0",
-    "react-native-url-polyfill": "^2.0.0"
+    "react-native-url-polyfill": "^2.0.0",
+    "react-native-web": "^0.20.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
@@ -46,9 +50,13 @@
   "expo": {
     "doctor": {
       "reactNativeDirectoryCheck": {
-        "listUnknownPackages": false
+        "listUnknownPackages": false,
+        "exclude": ["react-native-maps"]
       }
     }
+  },
+  "react-native": {
+    "react-native-maps": false
   },
   "resolutions": {
     "metro": "0.82.3",
